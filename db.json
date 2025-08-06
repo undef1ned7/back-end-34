@@ -7,10 +7,10 @@
     "image": "http://localhost:8000//images/images56b73e25-aa20-4f5e-94f7-155038cd5870.jpg"
   },
   {
-    "id": "833d0d16-9615-4f6d-96e0-66cdcd104ca6",
-    "title": "nota",
-    "description": "123",
-    "price": 1,
-    "image": "http://localhost:8000/images/images3a5c1cee-f987-4fef-9282-d97a90c53e62.jpg"
+    "id": "341bda7a-7c59-471f-bd70-72496f8bdfdc",
+    "title": "title",
+    "description": "desc",
+    "price": 123,
+    "image": "http://localhost:8000/images/images404e5344-f183-427f-8520-04b3761e5ab1.jpg"
   }
 ]

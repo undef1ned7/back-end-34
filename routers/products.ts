@@ -27,4 +27,15 @@ productsRouter.post("/", imagesUpload.single("image"), async (req, res) => {
   res.send(savedProduct);
 });
 
+productsRouter.delete("/:id", async (req: any, res: any) => {
+  const id = req.params.id;
+  const deleted = await fileDb.deleteItem(id);
+
+  if (!deleted) {
+    return res.status(404).send({ error: "Продукт не найден" });
+  }
+
+  res.send({ message: "Продукт удалён", id });
+});
+
 export default productsRouter;

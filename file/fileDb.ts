@@ -27,6 +27,7 @@ const fileDb = {
     const product = data.find((item) => item.id === id);
     return product || null;
   },
+
   async updateItem(id: string, updatedData: Partial<ProductWithoutId>) {
     const productIndex = data.findIndex((item) => item.id === id);
     if (productIndex === -1) {
@@ -41,6 +42,17 @@ const fileDb = {
     await this.save();
 
     return updatedProduct;
+  },
+
+  async deleteItem(id: string) {
+    const index = data.findIndex((item) => item.id === id);
+    if (index === -1) {
+      return false;
+    }
+
+    data.splice(index, 1);
+    await this.save();
+    return true;
   },
 
   async save() {
